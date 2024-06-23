@@ -262,11 +262,8 @@ public class Bot extends Player {
         if(getBattlefield().getBattlefieldMatrix()[coordinates[0]][coordinates[1]].equals("|X")){
             for(int i = 0; i < getShips().size(); i++){
                 for (int j = 0; j < getShips().get(i).getCoordinates().length; j++){
-                    System.out.println(getShips().get(i).getCoordinates()[j]);
-                    System.out.println(coordinates);
                     if (getShips().get(i).getCoordinates()[j] == coordinates){
                         if(getShips().get(i).isIs_alive()){
-                            System.out.println(1);
                             getShips().get(i).getAffected_points()[j] = coordinates;
                             for (int k = 0; k < getShips().get(i).getAffected_points().length; k++){
                                 if(getShips().get(i).getAffected_points()[0] == null){
@@ -278,7 +275,7 @@ public class Bot extends Player {
                             return "dead";
                         }
                         else{
-                            return "miss";
+                            return "replay";
                         }
                     }
                 }

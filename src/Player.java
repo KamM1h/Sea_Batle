@@ -405,6 +405,17 @@ public class Player {
         }
         return list;
     }
+
+    public int countLiveShips(){
+        int result = 0;
+        for (int i = 0; i < ships.size(); i++){
+            if(ships.get(i).isIs_alive()){
+                result++;
+            }
+        }
+        return result;
+    }
+
     public String getName() {
         return name;
     }

@@ -19,6 +19,7 @@ public class Battle {
                     turn = 2;
                 }
                 player1.changeOpponentBattlefield();
+                if(player2.countLiveShips() == 0) end_game = true;
             }
             while (turn == 2){
                 player1.getOpponent_batlfield().showBattlefield();
@@ -26,7 +27,7 @@ public class Battle {
                 if(!shotCheck(player2.shot(), player1)){
                     turn = 1;
                 }
-
+                if(player1.countLiveShips() == 0) end_game = true;
             }
         }
     }
@@ -46,6 +47,7 @@ public class Battle {
                 System.out.println("miss");
                 return false;
             default:
+                System.out.println("replay");
                 return true;
         }
     }

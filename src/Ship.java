@@ -19,6 +19,13 @@ public class Ship {
                     this.coordinates[i][0] = coordinates[0];
                     this.coordinates[i][1] = coordinates[1] + i;
                 }
+            case 1:
+                for(int i = 0; i < count_points; i++){
+                    this.coordinates[i][0] = coordinates[0] + i;
+                    this.coordinates[i][1] = coordinates[1];
+                }
+            default:
+                break;
         }
     }
 

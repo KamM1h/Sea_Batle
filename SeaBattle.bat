@@ -1,2 +1,2 @@
-javac -d bin ./src/*
-java -classpath ./bin Main
+javac -d out ./src/*
+java -classpath ./out Main
